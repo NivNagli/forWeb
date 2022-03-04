@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/compare.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+/>
+</head>
+<body>
+    <%- include('../includes/head-navigation.ejs') %>
+    <%- include('../includes/app-navigation.ejs') %>
+    <main class="main-compare__component">
+        <div class ="home-welcome__message">
+            <header>
+                <h1>COMPARE YOUR WARZONE SQUAD STATS</h1>
+                <br>
+                <br>
+                <h2>The data is correct for the common games only! out of each player's last 20 games.</h2>
+              </header>
+        </div>
+
+        <% if (errorMessage) { %>
+          <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %>
+
+        <div class="player-search-form"> <!-- father container-->
+    
+          <div class="players-selector__container"> <!-- select container-->
+            <div class='players-pick'>
+              <div class="radio-group">
+                <input type="radio" id="two-players" name="selector"><label for="two-players">2 Players</label><input type="radio" id="three-players" name="selector"><label for="three-players">3 Players</label><input type="radio" id="four-players" name="selector"><label for="four-players">4 Players</label>
+              </div>
+            </div>
+          </div>
+    
+          <form class="players-data__container"  action="/compare" method="POST">  
+            <div class="players-data__input"></div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="btn-wrapper">
+                <button class="button is-danger is-rounded" type="submit">Compare Squad</button>
+            </div>
+          </form> 
+
+        </div>
+      </main>
+
+    <script src="/js/pageResponsives/pageBuilder.js"></script>
+    <script src="/js/pageResponsives/compareSearch.js"></script>  
+<%- include('../includes/end.ejs') %>

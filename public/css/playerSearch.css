@@ -1,0 +1,23 @@
+/* .player-search-form{
+    height: 100%;
+} */
+
+.player-data__info {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.players-data__input {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.home-welcome__message{
+    padding-bottom: 1.5rem;
+}
+
+.main-footer{
+    height: auto;
+}

@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/compare.css">
+<link rel="stylesheet" href="/css/playerSearch.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+/>
+
+<body>
+    <%- include('../includes/head-navigation.ejs') %>
+    <%- include('../includes/app-navigation.ejs') %>
+    
+    <main class="player-search__main">
+        <% if (errorMessage) { %>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %>
+
+        <div class ="home-welcome__message">
+            <header>
+                <h1>FIND YOUR LIFETIME AND WEEKLY STATS</h1>
+              </header>
+        </div>
+        <div class='player-search-form'>
+            <form class="players-data__container"  action="/player-search" method="POST">  
+                <div class="players-data__input">
+                    <div class="player-data__info"> 
+                        <div class='platform-pick'>
+                            <div class="radio-group">
+                            <input type="radio" id='battle' name="selector" value='battle'><label for='battle'>Battle.net</label><input type="radio"  id='psn' name="selector" value='psn'><label for='psn'>Playstation</label><input type="radio"  id='xbl' name="selector" value='xbox'><label for='xbl'>Xbox</label>
+                            </div>
+                            <div class="username">
+                            <input  class="input is-rounded username-input" type="text" placeholder="Platform Username" name="username"> 
+                            </div>
+                        </div>
+                    </div>`
+                </div>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div class="btn-wrapper">
+                    <button class="button is-danger is-rounded" type="submit">Search</button>
+                </div>
+              </form> 
+        </div>
+    </main>
+    <script src="/js/pageResponsives/pageBuilder.js"></script>
+    <script src="/js/pageResponsives/playerSearch.js"></script>
+<%- include('../includes/end.ejs') %>

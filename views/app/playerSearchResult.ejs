@@ -1,0 +1,25 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/playerSearchResult.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+<body>
+    <%- include('../includes/head-navigation.ejs') %>
+    <%- include('../includes/app-navigation.ejs') %>
+    <main class="player-result__main">
+        <div class="players-result__main-div"></div>
+    </main>
+    <!-- Here we will transfer the username and platform that we got via the input -->
+    <div style="display: none;" class="usernamesInput">"<%=username %>" </div>
+    <div style="display: none;" class="platformsInput">"<%= platform%>" </div>
+
+<script src='/js/statExtractors/apiDataPuller.js'></script>
+<script src='/js/player.js'></script>
+<script src='/js/statExtractors/statsExtractor.js'></script>
+<script src='/js/pageResponsives/tableBuilder.js'></script>
+<script src='/js/pageResponsives/playerSearchResult.js'></script>
+<!-- <script src='/js/tests/statsExtractorTester.js'></script> -->
+<%- include('../includes/end.ejs') %>

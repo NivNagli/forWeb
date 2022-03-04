@@ -1,0 +1,103 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+.main-compare__component {
+    background-color: rgb(22, 19, 54);
+}
+
+.players-selector__container{
+    display: flex;
+    justify-content: center;
+}
+
+.players-data__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.player-data__container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.player-search-form {
+    background-color: #001f3f;
+}
+
+.player-data__info {
+    display: flex;
+    justify-items: center;
+    background-color: #012549;
+}
+
+.input {
+    margin-top: 0.5rem;
+    font-size: 10px;
+}
+
+
+.button {
+    margin-top: 1.75rem;
+    margin-bottom: 3rem;
+    width: 20rem;
+}
+
+
+.home-welcome__message {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(29, 16, 75);
+    font-family: Impact, Arial, Helvetica, sans-serif;
+}
+.home-welcome__message h1 {
+    height: 1.7rem;
+    color:white;
+    font-size: 1.7rem;
+    margin:1rem 0 2rem 2rem;
+}
+.home-welcome__message h2 {
+    height: 1.5rem;
+    color:rgba(255, 255, 255, 0.89);
+    margin:0 0.5rem 2rem 2rem;
+}
+
+
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+label {
+  color: #9e9292;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 1rem;
+}
+
+input[type=radio]:checked + label {
+  color: white;
+  background-color: rgb(255, 59, 59);
+}
+
+label + input[type=radio] + label {
+  border-left: solid 3px #675f6b;
+}
+
+.radio-group {
+  border: solid 3px #675f6b;
+  display: inline-block;
+  margin: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}

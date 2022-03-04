@@ -1,0 +1,24 @@
+<header class="app-header">
+    <nav class="app-header__nav">
+      <ul class="app-header__item-list">
+        <% if (isAuthenticated) { %>
+        <!-- <li class="app-header__item">
+            <a class="<%= path === '/mysquads' ? 'active' : '' %>" href="/">My Squads</a>
+        </li> -->
+        <li class="app-header__item">
+            <a class="<%= path === '/profile-search' ? 'active' : '' %>" href="/profile-search">Profile</a>
+        </li>
+        <% } %>
+        <li class="app-header__item">
+          <a class="<%= path === '/' ? 'active' : '' %>" href="/">Compare</a>
+        </li>
+        <li class="app-header__item">
+          <a class="<%= path === '/player-search' ? 'active' : '' %>" href="/player-search">Search</a>
+        </li>
+        <!-- <li class="app-header__item">
+            <a class="<%= path === '/leaderboard' ? 'active' : '' %>" href="/">Leaderboard</a>
+        </li> -->
+      </ul>
+    </nav>
+  </header>
+  

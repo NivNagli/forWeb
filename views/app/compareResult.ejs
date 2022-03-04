@@ -1,0 +1,34 @@
+<%- include('../includes/head.ejs') %>
+<!-- <link rel="stylesheet" href="/css/compare.css"> -->
+<link rel="stylesheet" href="/css/compareResult.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+<body>
+    <%- include('../includes/head-navigation.ejs') %>
+    <%- include('../includes/app-navigation.ejs') %>
+    <main class="player-result__main">
+
+      <div class="players-selector__container"> 
+        <div class='players-pick'>
+          <div class="radio-group">
+            <input type="radio" id="ranked-games" name="selector"><label for="ranked-games">Ranked Games</label><input type="radio" id="all-games" name="selector"><label for="all-games">All Game Modes</label>
+          </div>
+        </div>
+      </div>
+
+        <div class="players-result__main-div"></div>
+    </main>
+    <div style="display: none;" class="usernamesInput">"<%=usernames %>" </div>
+    <div style="display: none;" class="platformsInput">"<%= platforms%>" </div>
+<script src='/js/statExtractors/apiDataPuller.js'></script>
+<script src='/js/player.js'></script>
+<script src='/js/pageResponsives/tableBuilder.js'></script>
+<script src='/js/statExtractors/statsExtractor.js'></script>
+<script src="/js/pageResponsives/pageBuilder.js"></script>
+<script src='/js/pageResponsives/compareResult.js'></script>
+<!-- <script src='/js/tests/statsExtractorTester.js'></script> -->
+<%- include('../includes/end.ejs') %>

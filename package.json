@@ -1,0 +1,37 @@
+{
+  "name": "warzonesquad",
+  "version": "1.0.0",
+  "description": "Warzone Squad Web Server",
+  "main": "app.js",
+  "engines": {
+    "node" : "15.12.0",
+    "npm" : "7.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production MONGODB_USER=NivNagli MONGODB_PASSWORD=NivNagliWarzoneSquad97 MONGODB_DEFAULT_DATABASE=warzoneSquad MY_SECRET=NivNagliWarzoneSquad97 API_LASTGAMESTAT=http://localhost:8080/extract/lastGamesStats/ API_GENERALSTATS=http://localhost:8080/extract/generalStats/ node app.js",
+    "start-server": "node app.js",
+    "start:dev": "MONGODB_USER=NivNagli MONGODB_PASSWORD=NivNagliWarzoneSquad97 MONGODB_DEFAULT_DATABASE=warzoneSquad MY_SECRET=NivNagliWarzoneSquad97 API_LASTGAMESTAT=http://localhost:8080/extract/lastGamesStats/ API_GENERALSTATS=http://localhost:8080/extract/generalStats/ nodemon app.js"
+  },
+  "author": "Niv Nagli",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.0.7",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.0.6",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

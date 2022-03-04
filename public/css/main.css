@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family:  Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 5rem 3.5rem auto fit-content(5rem);
+  grid-template-areas:
+    "head-nav"
+    "app-nav"
+    "main"
+    "footer";
+  height: 100%;
+  background-color: rgb(22, 19, 54);
+}
+
+.main-header {
+  grid-area: head-nav;
+  height: auto;
+}
+
+.app-header {
+  grid-area: app-nav;
+}
+
+.main-header, 
+.app-header {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__icon img {
+  height: 5.5rem;
+  width: 15rem;
+}
+
+.main-header__nav,
+.app-header__nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__nav {
+  background-color: rgb(33, 30, 68);
+  justify-content: right;
+}
+
+.app-header__nav {
+  background-color: rgb(37, 31, 102);;
+  justify-content: center;
+}
+
+.main-header__item-list,
+.app-header__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header__item,
+.app-header__item {
+  margin: 0 1rem 0 1rem;
+  padding: 0;
+}
+
+.main-header__item a,
+.main-header__item button,
+.app-header__item a,
+.app-header__item button {
+  font: inherit;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active,
+.main-header__item button:hover,
+.main-header__item button:active,
+.app-header__item a:hover,
+.app-header__item a:active,
+.app-header__item a.active,
+.app-header__item button:hover,
+.app-header__item button:active {
+  color: #3bd1ff;
+}
+
+.main-footer {
+  background: black;
+  padding: 0.5rem;
+  /* margin-top: 3rem; */
+  grid-area: footer;
+}
+
+.main-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-footer__link {
+  margin: 0.5rem 0;
+}
+
+.main-footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #3bd1ff;
+}
+
+@media (min-width: 40rem) {
+  .main-footer__link {
+    margin: 0 1rem;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.user-message {
+  margin: auto;
+  width: 90%;
+  border: 1px solid #4771fa;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: #b9c9ff;
+  text-align: center;
+}
+
+.user-message--error {
+  border-color: red;
+  background: rgb(255, 176, 176);
+  color: red;
+}
